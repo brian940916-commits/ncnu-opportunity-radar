@@ -1,0 +1,22 @@
+# NCNU Opportunity Radar Agent — Python 依賴
+# Python 3.10+
+# 版本用寬鬆下限，方便學生環境安裝
+
+# MCP SDK：把三個 tool 註冊成 MCP server，供 Claude Code 呼叫
+mcp>=1.0.0
+
+# 爬蟲：抓暨大四個固定頁面的 HTML（含 User-Agent header）
+requests>=2.31.0
+
+# HTML 解析：解析暨大頁面的表格列
+beautifulsoup4>=4.12.0
+
+# BeautifulSoup 的解析器後端，比內建 html.parser 快、對舊式表格容錯更好
+lxml>=5.0.0
+
+# 免 API key 的外部搜尋（search_web 用）
+duckduckgo-search>=6.0.0
+
+# 註：
+# - AI 判斷由 Claude Code 本身推理，不需要 anthropic SDK
+# - json / concurrent.futures / datetime 為標準庫，不需安裝
